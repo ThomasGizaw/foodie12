@@ -5,6 +5,7 @@ import { Dish } from '@/types';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Share2, MessageCircle, ShoppingCart, Star } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 interface VideoCardProps {
   dish: Dish;
@@ -14,9 +15,15 @@ interface VideoCardProps {
 export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
   const [isLiked, setIsLiked] = useState(false);
   const [videoError, setVideoError] = useState(false);
+  const { toast } = useToast();
 
   const handleAddToCart = () => {
     onAddToCart(dish);
+    toast({
+      title: "Added to cart!",
+      description: `${dish.name} has been added to your cart.`,
+      duration: 2000,
+    });
   };
 
   const handleVideoError = () => {

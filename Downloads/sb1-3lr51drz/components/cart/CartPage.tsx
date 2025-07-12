@@ -47,11 +47,25 @@ export default function CartPage() {
               <Card key={item.dish.id}>
                 <CardContent className="p-4">
                   <div className="flex items-center gap-4">
-                    <img
-                      src={item.dish.image}
-                      alt={item.dish.name}
-                      className="w-16 h-16 object-cover rounded-lg"
-                    />
+                    {item.dish.video ? (
+                      <video
+                        src={item.dish.video}
+                        className="w-16 h-16 object-cover rounded-lg"
+                        muted
+                        loop
+                        autoPlay
+                        playsInline
+                      />
+                    ) : (
+                      <img
+                        src={item.dish.image || 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'}
+                        alt={item.dish.name}
+                        className="w-16 h-16 object-cover rounded-lg"
+                        onError={(e) => {
+                          e.currentTarget.src = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop';
+                        }}
+                      />
+                    )}
                     
                     <div className="flex-1">
                       <h3 className="font-semibold">{item.dish.name}</h3>

@@ -1,9 +1,11 @@
 'use client';
 
-import { Search, MapPin, SlidersHorizontal, LayoutGrid, Play } from 'lucide-react';
+import { Search, MapPin, SlidersHorizontal, LayoutGrid, Play, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
+import { useCart } from '@/contexts/CartContext';
+import { useRouter } from 'next/navigation';
 
 interface TopNavigationProps {
   viewMode: 'feed' | 'menu';
@@ -20,6 +22,9 @@ export default function TopNavigation({
   onSearchChange,
   onFilterClick
 }: TopNavigationProps) {
+  const { itemCount } = useCart();
+  const router = useRouter();
+
   return (
     <div className="fixed top-0 left-0 right-0 bg-transparent z-50 px-4 py-3">
       <div className="flex items-center gap-3">
@@ -39,6 +44,20 @@ export default function TopNavigation({
           className="p-2 text-white bg-black/20 backdrop-blur-sm border-white/20 hover:bg-black/30"
         >
           {viewMode === 'feed' ? <LayoutGrid className="h-4 w-4" /> : <Play className="h-4 w-4" />}
+        </Button>
+
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => router.push('/cart')}
+          className="p-2 text-white bg-black/20 backdrop-blur-sm border-white/20 hover:bg-black/30 relative"
+        >
+          <ShoppingCart className="h-4 w-4" />
+          {itemCount > 0 && (
+            <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+              {itemCount}
+            </span>
+          )}
         </Button>
       </div>
       

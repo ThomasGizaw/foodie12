@@ -17,6 +17,7 @@ import ProfilePage from '@/components/profile/ProfilePage';
 import SavedPage from '@/components/pages/SavedPage';
 import DiscoverPage from '@/components/pages/DiscoverPage';
 import ActivityPage from '@/components/pages/ActivityPage';
+import FloatingCartButton from '@/components/cart/FloatingCartButton';
 
 export default function Home() {
   const { user, isLoading } = useAuth();
@@ -133,6 +134,8 @@ export default function Home() {
         filters={filters}
         onFiltersChange={setFilters}
       />
+
+      <FloatingCartButton />
     </div>
   );
 }

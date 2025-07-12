@@ -211,7 +211,7 @@ export const mockDishes: Dish[] = [
     description: 'Daring Original Plant Chicken, sautéed peppers and onions over rice with white and hot sauce',
     price: 14.00,
     image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
+    video: 'https://videos.pexels.com/video-files/856086/856086-hd_1920_1080_25fps.mp4', // Sushi rolling prep video
     rating: 4.0,
     reviews: 94,
     tags: ['POPULAR', 'VEGAN', 'HEALTHY'],

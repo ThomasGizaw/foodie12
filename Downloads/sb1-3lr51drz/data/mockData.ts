@@ -210,7 +210,7 @@ export const mockDishes: Dish[] = [
     description: 'Daring Original Plant Chicken, sautéed peppers and onions over rice with white and hot sauce',
     price: 14.00,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/255086206.sd.mp4?s=1e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e&profile_id=164', // Hansol Kim
     rating: 4.0,
     reviews: 94,
     tags: ['POPULAR', 'VEGAN', 'HEALTHY'],
@@ -223,7 +223,7 @@ export const mockDishes: Dish[] = [
     description: 'Smashed avocado on sourdough bread with cherry tomatoes and hemp seeds',
     price: 11.50,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/3195650.sd.mp4?s=2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e&profile_id=164', // Pressmaster
     rating: 4.1,
     reviews: 45,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],
@@ -236,7 +236,7 @@ export const mockDishes: Dish[] = [
     description: 'Nutritious quinoa bowl with roasted vegetables and tahini dressing',
     price: 13.50,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184187/3184187-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/3015488.sd.mp4?s=3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e3e&profile_id=164', // Taryn Elliott
     rating: 4.3,
     reviews: 67,
     tags: ['HEALTHY', 'VEGAN', 'GLUTEN-FREE'],
@@ -249,7 +249,7 @@ export const mockDishes: Dish[] = [
     description: 'Plant-based patty with lettuce, tomato, and special sauce',
     price: 12.00,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184188/3184188-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/2894881.sd.mp4?s=4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e4e&profile_id=164', // Kelly
     rating: 4.2,
     reviews: 89,
     tags: ['VEGAN', 'POPULAR'],
@@ -262,7 +262,7 @@ export const mockDishes: Dish[] = [
     description: 'Spinach and mango smoothie bowl topped with granola and berries',
     price: 9.50,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184189/3184189-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/10835097.sd.mp4?s=5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e5e&profile_id=164', // Gilario Guevara
     rating: 4.4,
     reviews: 34,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],
@@ -275,7 +275,7 @@ export const mockDishes: Dish[] = [
     description: 'Juicy beef patty with lettuce, tomato, onions, pickles, and special sauce',
     price: 12.99,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184190/3184190-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/2832316.sd.mp4?s=6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e6e&profile_id=164', // Elijah O'Donnell
     rating: 4.5,
     reviews: 156,
     tags: ['POPULAR', 'CLASSIC'],
@@ -288,7 +288,7 @@ export const mockDishes: Dish[] = [
     description: 'Two beef patties with double cheese and bacon',
     price: 16.99,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184191/3184191-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/3195728.sd.mp4?s=7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e7e&profile_id=164', // Pressmaster
     rating: 4.6,
     reviews: 203,
     tags: ['POPULAR', 'INDULGENT'],
@@ -301,7 +301,7 @@ export const mockDishes: Dish[] = [
     description: 'Crispy chicken breast with mayo and fresh vegetables',
     price: 13.99,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184192/3184192-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/1745532.sd.mp4?s=8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e8e&profile_id=164', // Catherine Franken
     rating: 4.3,
     reviews: 98,
     tags: ['CHICKEN', 'CRISPY'],
@@ -314,7 +314,7 @@ export const mockDishes: Dish[] = [
     description: 'Beef patty with BBQ sauce, bacon, and onion rings',
     price: 15.99,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184193/3184193-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/3192257.sd.mp4?s=9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e9e&profile_id=164', // Pressmaster
     rating: 4.4,
     reviews: 134,
     tags: ['BBQ', 'BACON'],
@@ -327,7 +327,7 @@ export const mockDishes: Dish[] = [
     description: 'Crispy fries topped with cheese, bacon, and green onions',
     price: 8.99,
     image: '',
-    video: 'https://videos.pexels.com/video-files/3184194/3184194-hd_1920_1080_25fps.mp4',
+    video: 'https://player.vimeo.com/external/3704910.sd.mp4?s=10e10e10e10e10e10e10e10e10e10e10e10e10e10e10e&profile_id=164', // cottonbro studio
     rating: 4.2,
     reviews: 76,
     tags: ['SIDES', 'LOADED'],

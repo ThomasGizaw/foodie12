@@ -16,10 +16,9 @@ export default function BottomNavigation({ activeTab, onTabChange, vertical = fa
   const router = useRouter();
 
   const tabs = [
-    { id: 'feed', label: 'Feed', icon: Home },
+    { id: 'feed', label: 'Cart', icon: ShoppingCart, onClick: () => router.push('/cart') },
     { id: 'saved', label: 'Saved', icon: Bookmark },
     { id: 'discover', label: 'Discover', icon: Compass },
-    { id: 'cart', label: 'Cart', icon: ShoppingCart, onClick: () => router.push('/cart') },
     { id: 'activity', label: 'Activity', icon: Clock },
     { id: 'profile', label: 'Profile', icon: User }
   ];
@@ -39,7 +38,7 @@ export default function BottomNavigation({ activeTab, onTabChange, vertical = fa
           >
             <div className="relative">
               <Icon className={`h-6 w-6 ${activeTab === id ? 'text-orange-500' : 'text-white'}`} />
-              {id === 'cart' && itemCount > 0 && (
+              {id === 'feed' && itemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {itemCount}
                 </span>
@@ -67,7 +66,7 @@ export default function BottomNavigation({ activeTab, onTabChange, vertical = fa
           >
             <div className="relative">
               <Icon className={`h-5 w-5 ${activeTab === id ? 'text-orange-500' : 'text-white'}`} />
-              {id === 'cart' && itemCount > 0 && (
+              {id === 'feed' && itemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {itemCount}
                 </span>

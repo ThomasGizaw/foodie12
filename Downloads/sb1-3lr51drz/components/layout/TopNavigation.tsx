@@ -45,20 +45,6 @@ export default function TopNavigation({
         >
           {viewMode === 'feed' ? <LayoutGrid className="h-4 w-4" /> : <Play className="h-4 w-4" />}
         </Button>
-
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={() => router.push('/cart')}
-          className="p-2 text-white bg-black/20 backdrop-blur-sm border-white/20 hover:bg-black/30 relative"
-        >
-          <ShoppingCart className="h-4 w-4" />
-          {itemCount > 0 && (
-            <span className="absolute -top-1 -right-1 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
-              {itemCount}
-            </span>
-          )}
-        </Button>
       </div>
       
       <div className="flex items-center gap-3 mt-3">

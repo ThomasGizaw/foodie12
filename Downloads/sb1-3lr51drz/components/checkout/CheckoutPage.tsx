@@ -108,11 +108,25 @@ export default function CheckoutPage() {
 
                   return (
                     <div key={item.dish.id} className="flex items-center gap-3">
-                      <img
-                        src={item.dish.image}
-                        alt={item.dish.name}
-                        className="w-12 h-12 object-cover rounded-lg"
-                      />
+                      {item.dish.video ? (
+                        <video
+                          src={item.dish.video}
+                          className="w-12 h-12 object-cover rounded-lg"
+                          muted
+                          loop
+                          autoPlay
+                          playsInline
+                        />
+                      ) : (
+                        <img
+                          src={item.dish.image || 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'}
+                          alt={item.dish.name}
+                          className="w-12 h-12 object-cover rounded-lg"
+                          onError={(e) => {
+                            e.currentTarget.src = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop';
+                          }}
+                        />
+                      )}
                       <div className="flex-1">
                         <h4 className="font-medium text-sm">{item.dish.name}</h4>
                         <p className="text-xs text-gray-600">{item.dish.restaurant.name}</p>
@@ -186,7 +200,7 @@ export default function CheckoutPage() {
             <CardContent>
               <RadioGroup
                 value={formData.paymentMethod}
-                onValueChange={(value) => handleChange('paymentMethod', value)}
+                onValueChange={(value: string) => handleChange('paymentMethod', value)}
               >
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="cash" id="cash" />

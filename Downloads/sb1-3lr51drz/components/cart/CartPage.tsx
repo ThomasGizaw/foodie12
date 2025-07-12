@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
+import { Trash2, Plus, Minus, ShoppingBag, Home } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
 export default function CartPage() {
@@ -34,7 +34,17 @@ export default function CartPage() {
       <div className="max-w-2xl mx-auto">
         <div className="flex items-center justify-between mb-6">
           <h1 className="text-2xl font-bold">Your Cart</h1>
-          <p className="text-sm text-gray-600">{itemCount} items</p>
+          <div className="flex items-center gap-2">
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => router.push('/')}
+              className="p-2"
+            >
+              <Home className="h-4 w-4" />
+            </Button>
+            <p className="text-sm text-gray-600">{itemCount} items</p>
+          </div>
         </div>
 
         <div className="space-y-4 mb-6">

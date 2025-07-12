@@ -71,7 +71,7 @@ export default function Home() {
   }
 
   const renderContent = () => {
-    if (activeTab === 'cart') {
+    if (activeTab === 'feed') {
       return <CartPage />;
     }
     
@@ -91,7 +91,7 @@ export default function Home() {
       return <ActivityPage />;
     }
 
-    // Feed tab
+    // Default to feed view
     if (viewMode === 'feed') {
       return <VideoFeed dishes={filteredDishes} onAddToCart={handleAddToCart} />;
     } else {
@@ -101,7 +101,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {activeTab === 'feed' && (
+      {activeTab !== 'feed' && (
         <TopNavigation
           viewMode={viewMode}
           onViewModeChange={setViewMode}

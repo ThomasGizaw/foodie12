@@ -114,10 +114,18 @@ export default function Home() {
         {renderContent()}
       </main>
 
-      <BottomNavigation
-        activeTab={activeTab}
-        onTabChange={handleTabChange}
-      />
+      {viewMode === 'feed' ? (
+        <BottomNavigation
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+          vertical={true}
+        />
+      ) : (
+        <BottomNavigation
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+        />
+      )}
 
       <FilterModal
         isOpen={showFilterModal}

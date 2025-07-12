@@ -58,12 +58,12 @@ export default function BottomNavigation({ activeTab, onTabChange, vertical = fa
             variant="ghost"
             size="sm"
             onClick={() => onTabChange(id)}
-            className={`flex flex-col items-center gap-1 px-3 py-2 backdrop-blur-sm ${
-              activeTab === id ? 'text-orange-500 bg-white/20' : 'text-white bg-black/10 hover:bg-white/20'
+            className={`flex flex-col items-center gap-1 px-3 py-2 backdrop-blur-sm bg-transparent border-none shadow-none ${
+              activeTab === id ? 'text-orange-500' : 'text-white'
             }`}
           >
             <div className="relative">
-              <Icon className="h-5 w-5" />
+              <Icon className={`h-5 w-5 ${activeTab === id ? 'text-orange-500' : 'text-white'}`} />
               {id === 'feed' && itemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {itemCount}

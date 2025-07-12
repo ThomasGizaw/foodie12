@@ -19,6 +19,15 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
     onAddToCart(dish);
   };
 
+  const handleVideoError = () => {
+    console.log('Video failed to load:', dish.video);
+    setVideoError(true);
+  };
+
+  const handleVideoLoad = () => {
+    console.log('Video loaded successfully:', dish.video);
+  };
+
   const handleShare = async () => {
     if (navigator.share) {
       try {
@@ -47,15 +56,19 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
           loop
           muted
           playsInline
-          onError={() => setVideoError(true)}
+          onError={handleVideoError}
+          onLoadedData={handleVideoLoad}
         >
           <source src={dish.video} type="video/mp4" />
         </video>
       ) : (
         <img
-          src={dish.image}
+          src={dish.image || 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop'}
           alt={dish.name}
           className="w-full h-full object-cover"
+          onError={(e) => {
+            e.currentTarget.src = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop';
+          }}
         />
       )}
 

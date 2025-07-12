@@ -205,20 +205,20 @@ export const mockRestaurants: Restaurant[] = [
 
 // Replace all video links in mockDishes with the new set, cycling through them for all dishes
 const newFoodVideos = [
-  'https://videos.pexels.com/video-files/857195/857195-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/4613822/4613822-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184184/3184184-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184185/3184185-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184186/3184186-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184187/3184187-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184188/3184188-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184189/3184189-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184190/3184190-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184191/3184191-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184192/3184192-hd_1920_1080_25fps.mp4',
-  'https://videos.pexels.com/video-files/3184193/3184193-hd_1920_1080_25fps.mp4',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
 ];
 
 export const mockDishes: Dish[] = [

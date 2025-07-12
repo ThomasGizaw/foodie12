@@ -211,7 +211,7 @@ export const mockDishes: Dish[] = [
     description: 'Daring Original Plant Chicken, sautéed peppers and onions over rice with white and hot sauce',
     price: 14.00,
     image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/856086/856086-hd_1920_1080_25fps.mp4', // Sushi rolling prep video
+    video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4', // 5s food video
     rating: 4.0,
     reviews: 94,
     tags: ['POPULAR', 'VEGAN', 'HEALTHY'],
@@ -224,7 +224,7 @@ export const mockDishes: Dish[] = [
     description: 'Smashed avocado on sourdough bread with cherry tomatoes and hemp seeds',
     price: 11.50,
     image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195401/3195401-uhd_2560_1440_25fps.mp4',
+    video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4', // 5s food video
     rating: 4.1,
     reviews: 45,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],
@@ -237,7 +237,7 @@ export const mockDishes: Dish[] = [
     description: 'Nutritious quinoa bowl with roasted vegetables and tahini dressing',
     price: 13.50,
     image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
+    video: 'https://videos.pexels.com/video-files/3184184/3184184-hd_1920_1080_25fps.mp4', // 5s food video
     rating: 4.3,
     reviews: 67,
     tags: ['HEALTHY', 'VEGAN', 'GLUTEN-FREE'],
@@ -250,7 +250,7 @@ export const mockDishes: Dish[] = [
     description: 'Plant-based patty with lettuce, tomato, and special sauce',
     price: 12.00,
     image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195456/3195456-uhd_2560_1440_25fps.mp4',
+    video: 'https://videos.pexels.com/video-files/3184185/3184185-hd_1920_1080_25fps.mp4', // 5s food video
     rating: 4.2,
     reviews: 89,
     tags: ['VEGAN', 'POPULAR'],
@@ -263,7 +263,7 @@ export const mockDishes: Dish[] = [
     description: 'Spinach and mango smoothie bowl topped with granola and berries',
     price: 9.50,
     image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195401/3195401-uhd_2560_1440_25fps.mp4',
+    video: 'https://videos.pexels.com/video-files/3184186/3184186-hd_1920_1080_25fps.mp4', // 5s food video
     rating: 4.4,
     reviews: 34,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],

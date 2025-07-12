@@ -32,8 +32,11 @@ export default function Home() {
     distance: 10
   });
 
-  // Filter dishes based on search and filters
+  // Filter dishes based on search and filters, but always include PREPARATION videos
   const filteredDishes = mockDishes.filter(dish => {
+    const isPreparation = dish.tags.includes('PREPARATION');
+    if (isPreparation) return true;
+
     const matchesSearch = dish.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          dish.restaurant.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          dish.description.toLowerCase().includes(searchQuery.toLowerCase());

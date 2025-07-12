@@ -544,7 +544,74 @@ export const mockDishes: Dish[] = [
     tags: ['APPETIZER', 'CRISPY'],
     category: 'Appetizers',
     restaurant: { id: '5', name: 'Little China', distance: '2.0 miles away' }
-  }
+  },
+
+  // Food Preparation Videos (mock)
+  {
+    id: '101',
+    name: 'Sushi Rolling Prep',
+    description: 'Watch as our chef prepares fresh sushi rolls from scratch.',
+    price: 0,
+    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    video: 'https://videos.pexels.com/video-files/856086/856086-hd_1920_1080_25fps.mp4',
+    rating: 5.0,
+    reviews: 0,
+    tags: ['PREPARATION', 'SUSHI', 'JAPANESE'],
+    category: 'Preparation',
+    restaurant: { id: '3', name: 'Sushi Master', distance: '2.1 miles away' }
+  },
+  {
+    id: '102',
+    name: 'Burger Grilling',
+    description: 'See how our signature burgers are grilled to perfection.',
+    price: 0,
+    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4',
+    rating: 5.0,
+    reviews: 0,
+    tags: ['PREPARATION', 'BURGER', 'AMERICAN'],
+    category: 'Preparation',
+    restaurant: { id: '2', name: 'Burger Palace', distance: '1.2 miles away' }
+  },
+  {
+    id: '103',
+    name: 'Pasta Making',
+    description: 'Handmade pasta being prepared in our Italian kitchen.',
+    price: 0,
+    image: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    video: 'https://videos.pexels.com/video-files/854190/854190-hd_1920_1080_25fps.mp4',
+    rating: 5.0,
+    reviews: 0,
+    tags: ['PREPARATION', 'PASTA', 'ITALIAN'],
+    category: 'Preparation',
+    restaurant: { id: '7', name: 'Pizza Corner', distance: '0.8 miles away' }
+  },
+  {
+    id: '104',
+    name: 'Salad Tossing',
+    description: 'Fresh greens and veggies tossed for a healthy salad.',
+    price: 0,
+    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4',
+    rating: 5.0,
+    reviews: 0,
+    tags: ['PREPARATION', 'SALAD', 'HEALTHY'],
+    category: 'Preparation',
+    restaurant: { id: '12', name: 'Fresh Salads Co', distance: '0.7 miles away' }
+  },
+  {
+    id: '105',
+    name: 'Coffee Brewing',
+    description: 'Barista brewing a perfect cup of coffee.',
+    price: 0,
+    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    video: 'https://videos.pexels.com/video-files/3184184/3184184-hd_1920_1080_25fps.mp4',
+    rating: 5.0,
+    reviews: 0,
+    tags: ['PREPARATION', 'COFFEE', 'DRINKS'],
+    category: 'Preparation',
+    restaurant: { id: '17', name: 'Coffee & More', distance: '0.5 miles away' }
+  },
 
   // Continue this pattern for all 20 restaurants with 5 dishes each...
   // For brevity, I'm showing the pattern. The full implementation would have 100 total dishes.

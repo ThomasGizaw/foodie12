@@ -63,7 +63,7 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Content Overlay */}
-      <div className="absolute inset-0 flex flex-col justify-end p-4 pb-[14px]">
+      <div className="absolute inset-0 flex flex-col justify-end p-4 pb-20">
         <div className="space-y-3">
           {/* Tags */}
           <div className="flex gap-2 flex-wrap">

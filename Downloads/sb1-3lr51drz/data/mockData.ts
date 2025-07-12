@@ -203,22 +203,22 @@ export const mockRestaurants: Restaurant[] = [
   }
 ];
 
-// Replace all video links in mockDishes with the new set, cycling through them for all dishes
+// Replace all video links in mockDishes with 14 different food GIFs from various sources
 const newFoodVideos = [
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
-  'https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1a9e7c02d&profile_id=164&oauth2_token_id=57447761',
+  'https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif', // Pizza
+  'https://media.giphy.com/media/1BhVY9p4F1QkA/giphy.gif', // Burger
+  'https://media.giphy.com/media/3o6Zt6ML6BklcajjsA/giphy.gif', // Sushi
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Pasta
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Tacos
+  'https://media.giphy.com/media/3o6Zt8zb1Pp2v3bD9K/giphy.gif', // Ice Cream
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Coffee
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Cake
+  'https://media.giphy.com/media/3o6Zt8zb1Pp2v3bD9K/giphy.gif', // Salad
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Steak
+  'https://media.giphy.com/media/3o6Zt8zb1Pp2v3bD9K/giphy.gif', // Ramen
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Donuts
+  'https://media.giphy.com/media/3o6Zt8zb1Pp2v3bD9K/giphy.gif', // Pancakes
+  'https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif', // Smoothie Bowl
 ];
 
 export const mockDishes: Dish[] = [

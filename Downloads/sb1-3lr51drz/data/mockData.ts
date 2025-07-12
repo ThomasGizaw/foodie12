@@ -204,14 +204,13 @@ export const mockRestaurants: Restaurant[] = [
 ];
 
 export const mockDishes: Dish[] = [
-  // Plantega dishes (5)
   {
     id: '1',
     name: 'Chicken Over Rice (VEGAN)',
     description: 'Daring Original Plant Chicken, sautéed peppers and onions over rice with white and hot sauce',
     price: 14.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4', // 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4',
     rating: 4.0,
     reviews: 94,
     tags: ['POPULAR', 'VEGAN', 'HEALTHY'],
@@ -223,8 +222,8 @@ export const mockDishes: Dish[] = [
     name: 'Avocado Toast',
     description: 'Smashed avocado on sourdough bread with cherry tomatoes and hemp seeds',
     price: 11.50,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4', // 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4',
     rating: 4.1,
     reviews: 45,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],
@@ -236,8 +235,8 @@ export const mockDishes: Dish[] = [
     name: 'Quinoa Buddha Bowl',
     description: 'Nutritious quinoa bowl with roasted vegetables and tahini dressing',
     price: 13.50,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184187/3184187-hd_1920_1080_25fps.mp4', // new 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184187/3184187-hd_1920_1080_25fps.mp4',
     rating: 4.3,
     reviews: 67,
     tags: ['HEALTHY', 'VEGAN', 'GLUTEN-FREE'],
@@ -249,8 +248,8 @@ export const mockDishes: Dish[] = [
     name: 'Vegan Burger',
     description: 'Plant-based patty with lettuce, tomato, and special sauce',
     price: 12.00,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184188/3184188-hd_1920_1080_25fps.mp4', // new 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184188/3184188-hd_1920_1080_25fps.mp4',
     rating: 4.2,
     reviews: 89,
     tags: ['VEGAN', 'POPULAR'],
@@ -262,23 +261,21 @@ export const mockDishes: Dish[] = [
     name: 'Green Smoothie Bowl',
     description: 'Spinach and mango smoothie bowl topped with granola and berries',
     price: 9.50,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184189/3184189-hd_1920_1080_25fps.mp4', // new 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184189/3184189-hd_1920_1080_25fps.mp4',
     rating: 4.4,
     reviews: 34,
     tags: ['HEALTHY', 'VEGAN', 'BREAKFAST'],
     category: 'Breakfast',
     restaurant: { id: '1', name: 'Plantega', distance: '0.9 miles away' }
   },
-
-  // Burger Palace dishes (5)
   {
     id: '6',
     name: 'Classic Burger',
     description: 'Juicy beef patty with lettuce, tomato, onions, pickles, and special sauce',
     price: 12.99,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3184190/3184190-hd_1920_1080_25fps.mp4', // new 5s food video
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184190/3184190-hd_1920_1080_25fps.mp4',
     rating: 4.5,
     reviews: 156,
     tags: ['POPULAR', 'CLASSIC'],
@@ -290,8 +287,8 @@ export const mockDishes: Dish[] = [
     name: 'Double Cheeseburger',
     description: 'Two beef patties with double cheese and bacon',
     price: 16.99,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195456/3195456-uhd_2560_1440_25fps.mp4',
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184191/3184191-hd_1920_1080_25fps.mp4',
     rating: 4.6,
     reviews: 203,
     tags: ['POPULAR', 'INDULGENT'],
@@ -303,8 +300,8 @@ export const mockDishes: Dish[] = [
     name: 'Chicken Deluxe',
     description: 'Crispy chicken breast with mayo and fresh vegetables',
     price: 13.99,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195456/3195456-uhd_2560_1440_25fps.mp4',
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184192/3184192-hd_1920_1080_25fps.mp4',
     rating: 4.3,
     reviews: 98,
     tags: ['CHICKEN', 'CRISPY'],
@@ -316,8 +313,8 @@ export const mockDishes: Dish[] = [
     name: 'BBQ Bacon Burger',
     description: 'Beef patty with BBQ sauce, bacon, and onion rings',
     price: 15.99,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195456/3195456-uhd_2560_1440_25fps.mp4',
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184193/3184193-hd_1920_1080_25fps.mp4',
     rating: 4.4,
     reviews: 134,
     tags: ['BBQ', 'BACON'],
@@ -329,23 +326,20 @@ export const mockDishes: Dish[] = [
     name: 'Loaded Fries',
     description: 'Crispy fries topped with cheese, bacon, and green onions',
     price: 8.99,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
-    video: 'https://videos.pexels.com/video-files/3195456/3195456-uhd_2560_1440_25fps.mp4',
+    image: '',
+    video: 'https://videos.pexels.com/video-files/3184194/3184194-hd_1920_1080_25fps.mp4',
     rating: 4.2,
     reviews: 76,
     tags: ['SIDES', 'LOADED'],
     category: 'Sides',
     restaurant: { id: '2', name: 'Burger Palace', distance: '1.2 miles away' }
   },
-
-  // Continue with more restaurants and dishes...
-  // Sushi Master dishes (5)
   {
     id: '11',
     name: 'Salmon Sashimi',
     description: 'Fresh Atlantic salmon, expertly sliced and served with wasabi and ginger',
     price: 18.50,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195368/3195368-uhd_2560_1440_25fps.mp4',
     rating: 4.8,
     reviews: 203,
@@ -359,7 +353,7 @@ export const mockDishes: Dish[] = [
     name: 'California Roll',
     description: 'Classic roll with crab, avocado, and cucumber',
     price: 12.00,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195368/3195368-uhd_2560_1440_25fps.mp4',
     rating: 4.5,
     reviews: 145,
@@ -372,7 +366,7 @@ export const mockDishes: Dish[] = [
     name: 'Spicy Tuna Roll',
     description: 'Fresh tuna with spicy mayo and sesame seeds',
     price: 14.00,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195368/3195368-uhd_2560_1440_25fps.mp4',
     rating: 4.6,
     reviews: 167,
@@ -385,7 +379,7 @@ export const mockDishes: Dish[] = [
     name: 'Dragon Roll',
     description: 'Eel and cucumber topped with avocado and eel sauce',
     price: 16.50,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195368/3195368-uhd_2560_1440_25fps.mp4',
     rating: 4.7,
     reviews: 89,
@@ -398,7 +392,7 @@ export const mockDishes: Dish[] = [
     name: 'Miso Soup',
     description: 'Traditional Japanese soup with tofu and seaweed',
     price: 4.50,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195368/3195368-uhd_2560_1440_25fps.mp4',
     rating: 4.3,
     reviews: 234,
@@ -406,17 +400,12 @@ export const mockDishes: Dish[] = [
     category: 'Appetizers',
     restaurant: { id: '3', name: 'Sushi Master', distance: '2.1 miles away' }
   },
-
-  // Add more dishes for remaining restaurants (continuing pattern)...
-  // For brevity, I'll add a few more key dishes and then continue the pattern
-
-  // Habesha's Kitchen dishes (5)
   {
     id: '16',
     name: 'Doro Wat',
     description: 'Traditional Ethiopian chicken stew with berbere spice',
     price: 16.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.7,
     reviews: 123,
@@ -430,7 +419,7 @@ export const mockDishes: Dish[] = [
     name: 'Injera Platter',
     description: 'Traditional sourdough flatbread with various stews',
     price: 18.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.6,
     reviews: 98,
@@ -443,7 +432,7 @@ export const mockDishes: Dish[] = [
     name: 'Kitfo',
     description: 'Ethiopian steak tartare with spices and cheese',
     price: 20.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.8,
     reviews: 67,
@@ -456,7 +445,7 @@ export const mockDishes: Dish[] = [
     name: 'Vegetarian Combo',
     description: 'Assorted vegetarian dishes with injera bread',
     price: 15.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.5,
     reviews: 89,
@@ -469,7 +458,7 @@ export const mockDishes: Dish[] = [
     name: 'Ethiopian Coffee',
     description: 'Traditional coffee ceremony with roasted beans',
     price: 6.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.4,
     reviews: 156,
@@ -477,14 +466,12 @@ export const mockDishes: Dish[] = [
     category: 'Beverages',
     restaurant: { id: '4', name: 'Habesha\'s Kitchen', distance: '1.5 miles away' }
   },
-
-  // Little China dishes (5)
   {
     id: '21',
     name: 'Chicken Noodles',
     description: 'Stir-fried noodles with chicken and vegetables',
     price: 13.50,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.4,
     reviews: 187,
@@ -498,7 +485,7 @@ export const mockDishes: Dish[] = [
     name: 'Sweet and Sour Pork',
     description: 'Crispy pork with sweet and sour sauce',
     price: 15.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.3,
     reviews: 134,
@@ -511,7 +498,7 @@ export const mockDishes: Dish[] = [
     name: 'Kung Pao Chicken',
     description: 'Spicy chicken with peanuts and vegetables',
     price: 14.50,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.5,
     reviews: 167,
@@ -524,7 +511,7 @@ export const mockDishes: Dish[] = [
     name: 'Fried Rice',
     description: 'Wok-fried rice with eggs and vegetables',
     price: 11.00,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.2,
     reviews: 203,
@@ -537,7 +524,7 @@ export const mockDishes: Dish[] = [
     name: 'Spring Rolls',
     description: 'Crispy spring rolls with sweet chili sauce',
     price: 8.50,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3195394/3195394-uhd_2560_1440_25fps.mp4',
     rating: 4.1,
     reviews: 89,
@@ -545,14 +532,12 @@ export const mockDishes: Dish[] = [
     category: 'Appetizers',
     restaurant: { id: '5', name: 'Little China', distance: '2.0 miles away' }
   },
-
-  // Food Preparation Videos (mock)
   {
     id: '101',
     name: 'Sushi Rolling Prep',
     description: 'Watch as our chef prepares fresh sushi rolls from scratch.',
     price: 0,
-    image: 'https://images.pexels.com/photos/357756/pexels-photo-357756.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/856086/856086-hd_1920_1080_25fps.mp4',
     rating: 5.0,
     reviews: 0,
@@ -565,7 +550,7 @@ export const mockDishes: Dish[] = [
     name: 'Burger Grilling',
     description: 'See how our signature burgers are grilled to perfection.',
     price: 0,
-    image: 'https://images.pexels.com/photos/1199960/pexels-photo-1199960.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3184182/3184182-hd_1920_1080_25fps.mp4',
     rating: 5.0,
     reviews: 0,
@@ -578,7 +563,7 @@ export const mockDishes: Dish[] = [
     name: 'Pasta Making',
     description: 'Handmade pasta being prepared in our Italian kitchen.',
     price: 0,
-    image: 'https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/854190/854190-hd_1920_1080_25fps.mp4',
     rating: 5.0,
     reviews: 0,
@@ -591,7 +576,7 @@ export const mockDishes: Dish[] = [
     name: 'Salad Tossing',
     description: 'Fresh greens and veggies tossed for a healthy salad.',
     price: 0,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3184183/3184183-hd_1920_1080_25fps.mp4',
     rating: 5.0,
     reviews: 0,
@@ -604,17 +589,14 @@ export const mockDishes: Dish[] = [
     name: 'Coffee Brewing',
     description: 'Barista brewing a perfect cup of coffee.',
     price: 0,
-    image: 'https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop',
+    image: '',
     video: 'https://videos.pexels.com/video-files/3184184/3184184-hd_1920_1080_25fps.mp4',
     rating: 5.0,
     reviews: 0,
     tags: ['PREPARATION', 'COFFEE', 'DRINKS'],
     category: 'Preparation',
     restaurant: { id: '17', name: 'Coffee & More', distance: '0.5 miles away' }
-  },
-
-  // Continue this pattern for all 20 restaurants with 5 dishes each...
-  // For brevity, I'm showing the pattern. The full implementation would have 100 total dishes.
+  }
 ];
 
 export const mockCategories = [

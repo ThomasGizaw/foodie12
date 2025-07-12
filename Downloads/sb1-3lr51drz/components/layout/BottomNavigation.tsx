@@ -23,19 +23,19 @@ export default function BottomNavigation({ activeTab, onTabChange, vertical = fa
 
   if (vertical) {
     return (
-      <div className="fixed top-1/2 right-2 -translate-y-1/2 bg-transparent z-50 flex flex-col items-center gap-2 p-2 rounded-xl backdrop-blur-sm">
+      <div className="fixed top-1/2 right-2 -translate-y-1/2 z-50 flex flex-col items-center gap-2 p-2">
         {tabs.map(({ id, label, icon: Icon }) => (
           <Button
             key={id}
             variant="ghost"
             size="icon"
             onClick={() => onTabChange(id)}
-            className={`flex flex-col items-center gap-1 p-3 rounded-full backdrop-blur-sm ${
-              activeTab === id ? 'text-orange-500 bg-white/20' : 'text-white bg-black/10 hover:bg-white/20'
+            className={`flex flex-col items-center gap-1 p-3 bg-transparent border-none shadow-none ${
+              activeTab === id ? 'text-orange-500' : 'text-white'
             }`}
           >
             <div className="relative">
-              <Icon className="h-6 w-6" />
+              <Icon className={`h-6 w-6 ${activeTab === id ? 'text-orange-500' : 'text-white'}`} />
               {id === 'feed' && itemCount > 0 && (
                 <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
                   {itemCount}

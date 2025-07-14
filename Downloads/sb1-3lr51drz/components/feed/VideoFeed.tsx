@@ -8,10 +8,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface VideoFeedProps {
   dishes: Dish[];
-  onAddToCart: (dish: Dish) => void;
 }
 
-export default function VideoFeed({ dishes, onAddToCart }: VideoFeedProps) {
+export default function VideoFeed({ dishes }: VideoFeedProps) {
   // Group dishes by restaurant
   const dishGroups = dishes.reduce((groups, dish) => {
     const restaurantId = dish.restaurant.id;
@@ -45,7 +44,7 @@ export default function VideoFeed({ dishes, onAddToCart }: VideoFeedProps) {
                 className="w-full h-full flex-shrink-0 snap-center"
                 style={{ minWidth: '100vw', minHeight: '100vh', scrollSnapAlign: 'center' }}
               >
-                <VideoCard dish={dish} onAddToCart={onAddToCart} />
+                <VideoCard dish={dish} />
               </div>
             ))}
           </div>

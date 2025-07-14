@@ -9,22 +9,14 @@ import { useToast } from '@/hooks/use-toast';
 
 interface VideoCardProps {
   dish: Dish;
-  onAddToCart: (dish: Dish) => void;
 }
 
-export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
+export default function VideoCard({ dish }: VideoCardProps) {
   const [isLiked, setIsLiked] = useState(false);
   const [videoError, setVideoError] = useState(false);
   const { toast } = useToast();
 
-  const handleAddToCart = () => {
-    onAddToCart(dish);
-    toast({
-      title: "Added to cart!",
-      description: `${dish.name} has been added to your cart.`,
-      duration: 2000,
-    });
-  };
+  // Removed handleAddToCart and all cart logic
 
   const handleVideoError = () => {
     console.log('Video failed to load:', dish.video);
@@ -44,7 +36,7 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
           url: window.location.href,
         });
       } catch (error) {
-        console.log('Error sharing:', error);
+        // handle error
       }
     }
   };
@@ -111,7 +103,7 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
 
             <div className="flex items-center gap-2">
               <div className="flex items-center gap-1">
-                <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                <Star className="h-4 w-4 text-yellow-400" />
                 <span className="text-white font-medium">{dish.rating}</span>
                 <span className="text-gray-300">({dish.reviews})</span>
               </div>
@@ -145,7 +137,7 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
                 <MessageCircle className="h-6 w-6" />
               </Button>
             </div>
-
+            {/* Removed Add to cart button */}
             <div className="flex items-center gap-3">
               <div className="text-right">
                 {dish.discount && (
@@ -157,13 +149,6 @@ export default function VideoCard({ dish, onAddToCart }: VideoCardProps) {
                   US${discountedPrice.toFixed(2)}
                 </p>
               </div>
-              <Button
-                onClick={handleAddToCart}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full"
-              >
-                <ShoppingCart className="h-4 w-4 mr-2" />
-                Add to cart
-              </Button>
             </div>
           </div>
         </div>

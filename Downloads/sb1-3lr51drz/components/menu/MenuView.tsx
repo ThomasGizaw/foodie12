@@ -11,10 +11,9 @@ import { Star, ShoppingCart, MapPin, Search } from 'lucide-react';
 
 interface MenuViewProps {
   dishes: Dish[];
-  onAddToCart: (dish: Dish) => void;
 }
 
-export default function MenuView({ dishes, onAddToCart }: MenuViewProps) {
+export default function MenuView({ dishes }: MenuViewProps) {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredDishes = selectedCategory === 'All' 

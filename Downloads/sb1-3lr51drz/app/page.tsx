@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
-import { useCart } from '@/contexts/CartContext';
 import { FilterOptions } from '@/types';
 import { mockDishes } from '@/data/mockData';
 import Loading from '@/components/ui/loading';
@@ -12,18 +11,15 @@ import BottomNavigation from '@/components/layout/BottomNavigation';
 import VideoFeed from '@/components/feed/VideoFeed';
 import MenuView from '@/components/menu/MenuView';
 import FilterModal from '@/components/filter/FilterModal';
-import CartPage from '@/components/cart/CartPage';
 import ProfilePage from '@/components/profile/ProfilePage';
 import SavedPage from '@/components/pages/SavedPage';
 import DiscoverPage from '@/components/pages/DiscoverPage';
 import ActivityPage from '@/components/pages/ActivityPage';
-import FloatingCartButton from '@/components/cart/FloatingCartButton';
 
 export default function Home() {
   const { user, isLoading } = useAuth();
-  const { addItem } = useCart();
   const [viewMode, setViewMode] = useState<'feed' | 'menu'>('feed');
-  const [activeTab, setActiveTab] = useState('feed');
+  const [activeTab, setActiveTab] = useState('profile'); // Start from profile since cart is removed
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
@@ -33,7 +29,8 @@ export default function Home() {
     distance: 10
   });
 
-  const tabOrder = ['feed', 'profile', 'saved', 'discover', 'activity'];
+  // Only cycle through non-cart tabs
+  const tabOrder = ['profile', 'saved', 'discover', 'activity'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -67,10 +64,6 @@ export default function Home() {
     return matchesSearch && matchesCuisine && matchesPrice && matchesRating;
   });
 
-  const handleAddToCart = (dish: any) => {
-    addItem(dish);
-  };
-
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
   };
@@ -84,10 +77,6 @@ export default function Home() {
   }
 
   const renderContent = () => {
-    if (activeTab === 'feed') {
-      return <CartPage />;
-    }
-    
     if (activeTab === 'profile') {
       return <ProfilePage />;
     }
@@ -106,9 +95,9 @@ export default function Home() {
 
     // Default to feed view
     if (viewMode === 'feed') {
-      return <VideoFeed dishes={filteredDishes} onAddToCart={handleAddToCart} />;
+      return <VideoFeed dishes={filteredDishes} />;
     } else {
-      return <MenuView dishes={filteredDishes} onAddToCart={handleAddToCart} />;
+      return <MenuView dishes={filteredDishes} />;
     }
   };
 
@@ -148,7 +137,6 @@ export default function Home() {
         onFiltersChange={setFilters}
       />
 
-      <FloatingCartButton />
     </div>
   );
 }

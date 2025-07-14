@@ -19,7 +19,7 @@ import ActivityPage from '@/components/pages/ActivityPage';
 export default function Home() {
   const { user, isLoading } = useAuth();
   const [viewMode, setViewMode] = useState<'feed' | 'menu'>('feed');
-  const [activeTab, setActiveTab] = useState('profile'); // Start from profile since cart is removed
+  const [activeTab, setActiveTab] = useState('feed'); // Default to feed/home page
   const [searchQuery, setSearchQuery] = useState('');
   const [showFilterModal, setShowFilterModal] = useState(false);
   const [filters, setFilters] = useState<FilterOptions>({
@@ -29,19 +29,7 @@ export default function Home() {
     distance: 10
   });
 
-  // Only cycle through non-cart tabs
-  const tabOrder = ['profile', 'saved', 'discover', 'activity'];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveTab(prevTab => {
-        const currentIndex = tabOrder.indexOf(prevTab);
-        const nextIndex = (currentIndex + 1) % tabOrder.length;
-        return tabOrder[nextIndex];
-      });
-    }, 3000); // Change tab every 3 seconds
-    return () => clearInterval(interval);
-  }, []);
+  // Removed tabOrder and useEffect for cycling tabs
 
   // Filter dishes based on search and filters, but always include PREPARATION videos
   const filteredDishes = mockDishes.filter(dish => {
@@ -77,28 +65,23 @@ export default function Home() {
   }
 
   const renderContent = () => {
+    if (activeTab === 'feed') {
+      return viewMode === 'feed' ? <VideoFeed dishes={filteredDishes} /> : <MenuView dishes={filteredDishes} />;
+    }
     if (activeTab === 'profile') {
       return <ProfilePage />;
     }
-    
     if (activeTab === 'saved') {
       return <SavedPage />;
     }
-    
     if (activeTab === 'discover') {
       return <DiscoverPage />;
     }
-    
     if (activeTab === 'activity') {
       return <ActivityPage />;
     }
-
-    // Default to feed view
-    if (viewMode === 'feed') {
-      return <VideoFeed dishes={filteredDishes} />;
-    } else {
-      return <MenuView dishes={filteredDishes} />;
-    }
+    // Default fallback
+    return viewMode === 'feed' ? <VideoFeed dishes={filteredDishes} /> : <MenuView dishes={filteredDishes} />;
   };
 
   return (

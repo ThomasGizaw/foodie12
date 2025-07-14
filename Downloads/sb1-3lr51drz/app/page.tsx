@@ -33,6 +33,19 @@ export default function Home() {
     distance: 10
   });
 
+  const tabOrder = ['feed', 'profile', 'saved', 'discover', 'activity'];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab(prevTab => {
+        const currentIndex = tabOrder.indexOf(prevTab);
+        const nextIndex = (currentIndex + 1) % tabOrder.length;
+        return tabOrder[nextIndex];
+      });
+    }, 3000); // Change tab every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
+
   // Filter dishes based on search and filters, but always include PREPARATION videos
   const filteredDishes = mockDishes.filter(dish => {
     const isPreparation = dish.tags.includes('PREPARATION');

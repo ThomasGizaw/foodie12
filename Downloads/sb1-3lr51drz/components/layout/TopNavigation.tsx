@@ -1,10 +1,9 @@
-'use client';
+  'use client';
 
-import { Search, MapPin, SlidersHorizontal, LayoutGrid, Play, ShoppingCart } from 'lucide-react';
+import { Search, MapPin, SlidersHorizontal, LayoutGrid, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useState } from 'react';
-import { useCart } from '@/contexts/CartContext';
 import { useRouter } from 'next/navigation';
 
 interface TopNavigationProps {
@@ -22,7 +21,6 @@ export default function TopNavigation({
   onSearchChange,
   onFilterClick
 }: TopNavigationProps) {
-  const { itemCount } = useCart();
   const router = useRouter();
 
   return (

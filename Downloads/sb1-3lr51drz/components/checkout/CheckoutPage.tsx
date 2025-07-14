@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { useCart } from '@/contexts/CartContext';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -12,7 +11,6 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { CreditCard, Wallet, DollarSign, CheckCircle } from 'lucide-react';
 
 export default function CheckoutPage() {
-  const { items, total, clearCart } = useCart();
   const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [orderCompleted, setOrderCompleted] = useState(false);
@@ -23,8 +21,8 @@ export default function CheckoutPage() {
   });
 
   const deliveryFee = 2.99;
-  const tax = total * 0.1;
-  const finalTotal = total + deliveryFee + tax;
+  const tax = 0; // Assuming total is 0 for now as cart context is removed
+  const finalTotal = deliveryFee + tax;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +32,6 @@ export default function CheckoutPage() {
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     setOrderCompleted(true);
-    clearCart();
     setIsSubmitting(false);
   };
 
@@ -101,61 +98,22 @@ export default function CheckoutPage() {
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {items.map((item) => {
-                  const discountedPrice = item.dish.discount 
-                    ? item.dish.price * (1 - item.dish.discount / 100)
-                    : item.dish.price;
-
-                  return (
-                    <div key={item.dish.id} className="flex items-center gap-3">
-                      {item.dish.video ? (
-                        <video
-                          src={item.dish.video}
-                          className="w-12 h-12 object-cover rounded-lg"
-                          muted
-                          loop
-                          autoPlay
-                          playsInline
-                        />
-                      ) : (
-                        <img
-                          src={item.dish.image || 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop'}
-                          alt={item.dish.name}
-                          className="w-12 h-12 object-cover rounded-lg"
-                          onError={(e) => {
-                            e.currentTarget.src = 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop';
-                          }}
-                        />
-                      )}
-                      <div className="flex-1">
-                        <h4 className="font-medium text-sm">{item.dish.name}</h4>
-                        <p className="text-xs text-gray-600">{item.dish.restaurant.name}</p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-sm font-medium">{item.quantity}x</p>
-                        <p className="text-sm text-gray-600">${discountedPrice.toFixed(2)}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-                
-                <div className="border-t pt-3 mt-3 space-y-2">
-                  <div className="flex justify-between text-sm">
-                    <span>Subtotal</span>
-                    <span>${total.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span>Delivery Fee</span>
-                    <span>${deliveryFee.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span>Tax</span>
-                    <span>${tax.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between font-semibold text-lg border-t pt-2">
-                    <span>Total</span>
-                    <span>${finalTotal.toFixed(2)}</span>
-                  </div>
+                {/* This section will need to be updated if items are no longer available */}
+                <div className="flex justify-between">
+                  <span>Subtotal</span>
+                  <span>${0.00}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Delivery Fee</span>
+                  <span>${deliveryFee.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Tax</span>
+                  <span>${tax.toFixed(2)}</span>
+                </div>
+                <div className="flex justify-between font-semibold text-lg border-t pt-2">
+                  <span>Total</span>
+                  <span>${finalTotal.toFixed(2)}</span>
                 </div>
               </div>
             </CardContent>
